@@ -30,7 +30,7 @@ jobs:
     strategy:
       matrix:
         python-version: ['3.9', '3.10', '3.11']
-        fail-fast: false   # Si una versión falla, las otras continúan
+      fail-fast: false   # Si una versión falla, las otras continúan
 
     steps:
       - uses: actions/checkout@v4
