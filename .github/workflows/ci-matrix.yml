@@ -27,10 +27,10 @@ jobs:
     needs: lint   # Solo corre si el lint fue exitoso
     runs-on: ubuntu-latest
 
-    strategy:
+   strategy:
       matrix:
         python-version: ['3.9', '3.10', '3.11']
-      fail-fast: false   # Si una versión falla, las otras continúan
+      fail-fast: false   # <--- Corregido: alineado al mismo nivel que 'matrix'
 
     steps:
       - uses: actions/checkout@v4
