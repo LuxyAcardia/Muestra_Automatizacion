@@ -62,4 +62,3 @@ jobs:
           ls -la dist/
           echo 'Despliegue completado exitosamente.'
           echo '=========================================='
-```[cite: 2]
