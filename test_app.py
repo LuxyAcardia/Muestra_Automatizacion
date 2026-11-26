@@ -14,7 +14,7 @@ def test_suma_numeros_positivos():
 
 
 def test_suma_numeros_negativos():
-    assert suma(-2, -3) == 5
+    assert suma(-2, -3) == -5
 
 
 def test_suma_cero():
