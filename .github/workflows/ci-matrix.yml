@@ -22,15 +22,15 @@ jobs:
         run: flake8 app.py test_app.py --max-line-length=100
 
   # Job 2: Ejecutar tests en múltiples versiones de Python
-test:
-     name: Tests - Python ${{ matrix.python-version }}
-     needs: lint    # Solo corre si el lint fue exitoso
-     runs-on: ubuntu-24.04
+  test:
+    name: Tests - Python ${{ matrix.python-version }}
+    needs: lint    # Solo corre si el lint fue exitoso
+    runs-on: ubuntu-24.04
 
-   strategy:
+    strategy:
       matrix:
         python-version: ['3.9', '3.10', '3.11']
-      fail-fast: false   # <--- Corregido: alineado al mismo nivel que 'matrix'
+      fail-fast: false
 
     steps:
       - uses: actions/checkout@v4
